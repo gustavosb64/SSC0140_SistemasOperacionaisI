@@ -1,7 +1,7 @@
 # Leitura obrigatória: Fundamentos de Sistemas Operacionais, 8ª edição
 ## Silberschatz, Galvin, Gaugne
 
-## Parte I: Gerenciamento de Processos
+## Parte II: Gerenciamento de Processos
 
 ### Capítulo 3: Processos
 - [ ] 3.1 Conceito de Processo
@@ -18,7 +18,7 @@
 - [ ] 4.3 Bibliotecas de Threads
 - [ ] 4.7 Exemplos de Sistemas Operacionais
 
-### Capítulo 5: Threads
+### Capítulo 5: Scheduling da CPU
 - [ ] 5.1 Conceitos Básicos
 - [ ] 5.2 Critérios de Scheduling
 - [ ] 5.3 Algoritmos de Scheduling
