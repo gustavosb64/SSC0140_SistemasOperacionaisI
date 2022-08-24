@@ -8,12 +8,12 @@
 - [ ] 3.2 Scheduling de Processos
 - [ ] 3.3 Operações sobre Processos
 - [ ] 3.4 Comunicação Interprocessos
-- [ ] _3.5 IPC in Shared-Memory Systems_ [$10^{th}$ _edition_]
-- [ ] _3.6 IPC in Message-Passing Systems_ [$10^{th}$ _edition_]
+- [ ] _3.5 IPC in Shared-Memory Systems_ [10<sup>th</sup> _edition_]
+- [ ] _3.6 IPC in Message-Passing Systems_ [10<sup>th</sup> _edition_]
 
 ### Capítulo 4: Threads
 - [ ] 4.1 Visão geral
-- [ ] _4.2 Multicore Programming_ [$10^{th}$ _edition_]
+- [ ] _4.2 Multicore Programming_ [10<sup>th</sup> _edition_]
 - [ ] 4.2 Modelos de geração de Multithreads
 - [ ] 4.3 Bibliotecas de Threads
 - [ ] 4.7 Exemplos de Sistemas Operacionais
