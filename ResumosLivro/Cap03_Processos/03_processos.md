@@ -152,6 +152,38 @@
     * O pai está sendo encerrado e o SO não permite que um filho continue (**encerramento em cascata**).
   
 ## 3.4 Comunicação Interprocessos 
+* Processos executando concorrentemente podem ser tanto **indepententes** ou **cooperativos**:
+    * **Independentes**: não compartilha dados com nenhum outro processo corrente.
+    * **Cooperativos**: é afetado ou afeta outros processos sendo executados.
+* Motivos para se ter processos cooperativos:
+    * **Compartilhamento de informação**
+    * **Acelerar processos**: para acelerar um processo, podemos dividí-lo em subtarefas (possível apenas em CPU multicore)
+    * **Modularização**: dividir o sistema de maneira modular, dividindo o processo em diferentes subprocessos ou threads.
+* Processos cooperativos demandam que haja **comunicação interprocessos (IPC: Interprocesses Comunication)**
+* Há dois modelos fundamentais para isso: **shared-memory** ou **message-passing**.
+* **Shared-Memory**:
+    * uma região de memória comum é alocada para os processos, onde todos os processos que a compartilham podem interagir diretamente.
+    * mais rápido que message-passing, pois utiliza uma chamada de função apenas uma vez para alocar a memória.
+* **Message-Passing**:
+    * uma fila de mensagens é utilizada, onde são colocadas mensagens trocadas entre os processos cooperativos.
+    * melhor para lidar com menores quantidades de dados.
+    * como é necessário realizar uma chamada de sistema para cada mensagem, é mais lento que a abordatem de memória compartilhada (_shared-memory_).
+    * mais fácil de implementar em sistemas distribuídos.
+     
+![shared-memory vs message-passing](03_1_ipc_sharedmemory_messagepassing.png "shared-memory vs message-passing")
 
+## 3.5 IPC in Shared-Memory Systems [10<sup>th</sup> edition]
+* Normalmente, a região de memória compartilhada está situada na região de memória do processo que criou o segmento.
+* Um processo, caso queira usar uma região compartilhada de memória, deve se _attach_ a esta região de memória.
+* O SO costuma impedir que um processo acesse o espaço e memória alocado a outro. Para que a memória seja compartilhada, é necessário que os processos concordem em retirar esta restrição. 
+* A forma e a locação dos dados neste espaço compartilhado é responsabilidade dos processos envolvidos, e não faz parte do conhecimento do SO.
+* Os próprios processos são responsáveis para garantir que não estão escrevendo ou lendo da região simultaneamente.
+* Exemplo de uso: uma das soluções para **produtor-consumidor**:
+    * O produtor enche um buffer de memória, que deve ser esvaziada pelo consumidor.
+    * Eles devem estar sincronizados para que o consumidor não tente ler algo ainda não escrito.
+    * O buffer pode ser **unbounded** (sem restrição de tamanho) ou **bounded** (com restrição de tamanho).
+        * Caso seja **bounded**, o consumidor deve esperar caso o buffer esteja vazio e o produtor deve esperar caso esteja cheio.
+* Mecanismos de sincronismo são discutidos nos capítulos 6 e 7.
 
- 
+## 3.6 IPC in Message-Passing Systems [10<sup>th</sup> edition]
+
