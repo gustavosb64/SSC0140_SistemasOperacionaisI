@@ -4,9 +4,9 @@
 ## Parte II: Gerenciamento de Processos
 
 ### Capítulo 3: Processos
-- [ ] 3.1 Conceito de Processo
-- [ ] 3.2 Scheduling de Processos
-- [ ] 3.3 Operações sobre Processos
+- [X] 3.1 Conceito de Processo
+- [X] 3.2 Scheduling de Processos
+- [X] 3.3 Operações sobre Processos
 - [ ] 3.4 Comunicação Interprocessos
 - [ ] _3.5 IPC in Shared-Memory Systems_ [10<sup>th</sup> _edition_]
 - [ ] _3.6 IPC in Message-Passing Systems_ [10<sup>th</sup> _edition_]
