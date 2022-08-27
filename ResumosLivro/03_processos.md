@@ -186,4 +186,21 @@
 * Mecanismos de sincronismo são discutidos nos capítulos 6 e 7.
 
 ## 3.6 IPC in Message-Passing Systems [10<sup>th</sup> edition]
+* Um _message-passing_ sistema fornece pelo menos duas operações:
+    * ```send(message)```
+    * ```receive(message)```
+* Mensagens enviadas por um processo podem ser de **tamanho fixo ou variável**:
+    * Tamanho **fixo**: 
+        * implementação a nível de sistema é mais direta e fácil.
+        * a tarefa de programação fica mais difícil.
+    * Tamanho **variável**: 
+        * implementação a nível de sistema é mais complexa.
+        * a tarefa de programação fica mais simples.
+    * Esta diferença é um _tradeoff_ comum no design de sistemas operacionais.
+* Para um processo _P_ e um processo _Q_ se comunicarem, eles precisam estabelecer um **link de comunicação**. 
+* Este link pode ser implementado de diversas formas:
+    * Comunicação **direta** ou **indireta**.
+    * Comunicação **síncrona** ou **assíncrona**.
+    * Buffering **automático** ou **explícito**.
 
+### 3.6.1 Naming
