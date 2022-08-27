@@ -85,7 +85,7 @@
     * Cada dispositivo possui sua própria fila de dispositivo.
 * **Diagrama de enfileiramento** (_queueing diagram_): Figura 01
  
-![queueing diagram](03_0_queueing_diagram.png "Queueing Diagram")
+![queueing diagram](img/cap03/03_0_queueing_diagram.png "Queueing Diagram")
 
 ### 3.2.2 Schedulers
 * Em um sistema _batch_, normalmente sã osubmetidos mais processos do que é possível executar imediatamente.
@@ -170,7 +170,7 @@
     * como é necessário realizar uma chamada de sistema para cada mensagem, é mais lento que a abordatem de memória compartilhada (_shared-memory_).
     * mais fácil de implementar em sistemas distribuídos.
      
-![shared-memory vs message-passing](03_1_ipc_sharedmemory_messagepassing.png "shared-memory vs message-passing")
+![shared-memory vs message-passing](img/cap03/03_1_ipc_sharedmemory_messagepassing.png "shared-memory vs message-passing")
 
 ## 3.5 IPC in Shared-Memory Systems [10<sup>th</sup> edition]
 * Normalmente, a região de memória compartilhada está situada na região de memória do processo que criou o segmento.
@@ -204,3 +204,4 @@
     * Buffering **automático** ou **explícito**.
 
 ### 3.6.1 Naming
+

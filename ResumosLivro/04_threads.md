@@ -1,3 +1,4 @@
+\newpage
 # Capítulo 04: Threads
 
 * A maioria dos sistemas operacionais atuais já fornece recursos que permitem que um processo contenha vários threads de controle.
