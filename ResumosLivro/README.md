@@ -12,7 +12,7 @@
 - [ ] _3.6 IPC in Message-Passing Systems_ [10<sup>th</sup> _edition_]
 
 ### Capítulo 4: Threads
-- [ ] 4.1 Visão geral
+- [X] 4.1 Visão geral
 - [ ] _4.2 Multicore Programming_ [10<sup>th</sup> _edition_]
 - [ ] 4.2 Modelos de geração de Multithreads
 - [ ] 4.3 Bibliotecas de Threads
