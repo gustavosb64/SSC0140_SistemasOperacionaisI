@@ -13,10 +13,10 @@
 
 ### Capítulo 4: Threads
 - [X] 4.1 Visão geral
-- [ ] _4.2 Multicore Programming_ [10<sup>th</sup> _edition_]
-- [ ] 4.2 Modelos de geração de Multithreads
-- [ ] 4.3 Bibliotecas de Threads
-- [ ] 4.7 Exemplos de Sistemas Operacionais
+- [X] _4.2 Multicore Programming_ [10<sup>th</sup> _edition_]
+- [X] 4.2 Modelos de geração de Multithreads
+- [X] 4.3 Bibliotecas de Threads
+- [X] 4.7 Exemplos de Sistemas Operacionais
 
 ### Capítulo 5: Scheduling da CPU
 - [ ] 5.1 Conceitos Básicos
