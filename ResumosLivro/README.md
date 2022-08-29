@@ -19,11 +19,11 @@
 - [X] 4.7 Exemplos de Sistemas Operacionais
 
 ### Capítulo 5: Scheduling da CPU
-- [ ] 5.1 Conceitos Básicos
-- [ ] 5.2 Critérios de Scheduling
-- [ ] 5.3 Algoritmos de Scheduling
-- [ ] 5.4 Scheduling de Threads
-- [ ] 5.5 Scheduling com Multiprocessadores
+- [X] 5.1 Conceitos Básicos
+- [X] 5.2 Critérios de Scheduling
+- [X] 5.3 Algoritmos de Scheduling
+- [X] 5.4 Scheduling de Threads
+- [X] 5.5 Scheduling com Multiprocessadores
 - [ ] 5.6 Exemplos de Sistemas Operacionais
 
 ----------------------------------------------------
