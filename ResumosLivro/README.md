@@ -27,11 +27,11 @@
 - [ ] 5.6 Exemplos de Sistemas Operacionais
 
 ### Capítulo 6: Sincronização de Processos
-- [ ] 6.1 Antecedentes
-- [ ] 6.2 O problema da Seção Crítica
-- [ ] _6.5 Mutex Locks_ [10<sup>th</sup> _edition_]
-- [ ] 6.5 Semáforos
-- [ ] _6.9 Evaluation_ [10<sup>th</sup> _edition_]
+- [X] 6.1 Antecedentes
+- [X] 6.2 O problema da Seção Crítica
+- [X] _6.5 Mutex Locks_ [10<sup>th</sup> _edition_]
+- [X] 6.5 Semáforos
+- [X] _6.9 Evaluation_ [10<sup>th</sup> _edition_]
 
 ### Capítulo 7: Synchronization Examples [10<sup>th</sup> edition]
 - [ ] 7.1 _Classic Problems of Synchronization_
