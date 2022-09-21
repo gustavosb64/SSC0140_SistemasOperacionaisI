@@ -49,7 +49,15 @@ while (true){
     * In applications where it is easy to identify which processes only read shared data and which precesses only write shared data.
     * In applications that have more readers than writers.
 ### 7.1.3 The Dining-Philosophers Problem
-* 
+#### 7.1.3.1 Semaphore solution:
+* A philosopher tries to grab a chopstick by executing ```wait``` on the semaphore;
+* When the chopstick is released, it is executed ```signal()```.
+* However, **this creates a deadlock**.
+* A deadlock-free solution does not eliminate the possibility of starvation.
+#### 7.1.3.2 Monitor solution:
+* A philosopher must pick a chopstick only if both of them are available.
+* No deadlocks will occur.
+* Nevertheless, a philosopher might still starve to death.
  
 ## 7.2 Synchronization within the Kernel
 ### 7.2.1 Synchronization in Windows
