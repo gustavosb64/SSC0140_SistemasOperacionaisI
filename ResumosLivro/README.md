@@ -34,16 +34,16 @@
 - [X] _6.9 Evaluation_ [10<sup>th</sup> _edition_]
 
 ### Capítulo 7: Synchronization Examples [10<sup>th</sup> edition]
-- [ ] 7.1 _Classic Problems of Synchronization_
-- [ ] 7.2 _Synchronization within the Kernel_
+- [X] 7.1 _Classic Problems of Synchronization_
+- [X] 7.2 _Synchronization within the Kernel_
 - [ ] 7.3 _Posix Synchronization_ 
 - [ ] 7.5 _Alternative Approaches_ 
 
-### Capítulo 7: Deadlocks 
-- [ ] 7.1 Modelo de Sistema
+### Capítulo 8: Deadlocks [10<sup>th</sup> edition]
+- [ ] 8.1 _System Model_
 - [ ] 8.2 _Deadlock in Multithreaded Applications_ [10<sup>th</sup> _edition_]
-- [ ] 7.2 Caracterização do Deadlock
-- [ ] 7.3 Métodos para Manipulação de Deadlocks
+- [ ] 8.3 _Deadlock Characterization_
+- [ ] 8.4 _Methods for Handling Deadlocks_
 
 ----------------------------------------------------
 ## Parte III: Gerenciamento da Memória
