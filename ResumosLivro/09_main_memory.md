@@ -218,9 +218,8 @@ $0.80 \times 10 + 0.20 \times 20 = 12ns$
     * with standard paging, each process has its own page table, which allows multiple virtual addresses to be mapped to the same physical address.
     * because there is only one virtual page entry for every physical page, one physical page cannot have two or more shared virtual addresses.
     * therefore, with inverted page tables, only one mapping of virtual addresses to the shared physical address may occur at any given time.
- 
-##9.5 Swapping
 
 ![Inverted Page Table](img/cap09/05_inverted_page_table.png "Inverted Page Table")
-
+ 
+##9.5 Swapping
 * 
