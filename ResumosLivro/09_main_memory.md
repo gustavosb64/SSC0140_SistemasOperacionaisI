@@ -162,4 +162,65 @@
     * TLB allows some entries to be **wired down**, ie, cannot be removed.
 * Some TLB store **address-space identifier (ASIDs)** in each entry.
 * An ASID uniquely identifies each process and is used to provide address-space protection for that process.
+* If the ASIDs do not match, it is treated as a TLB miss.
+* **Hit ratio**: the percentage of times that the page number of interest is found in the TLB. 
+* **Effective memory-access time**: 
+    * suppose we have 80% hit ratio and it takes 10ns to access memory, then a mapped-memory access takes 10ns when the page number is in the TLB.
+    * if we fail to find the page number, then we must first access memory for the page table and frame number (10ns) and then access the desired byte in memory (10ns), for a total of 20ns.
+$0.80 \times 10 + 0.20 \times 20 = 12ns$
+* Since CPUs today may provide multiple levels of TLBs, it is much more complicated than above to calculate memory access time.
+###9.3.3 Protection
+* Memory protection in a paged environment is accomplished by protection bits associated with each frame.
+* One bit can define a page to be read-write or read-only.
+* **Valid-invalid bit**:
+    * when _valid_, the associated page is in the process's logical address space and is thus a legal (or valid) page.
+    * when _invalid_, the associated page is **not** in the process's logical address space and is thus an illegal (or invalid) page.
+* Illegal spaces are trapped by use of the valid-invalid bit. The OS sets this bit for each page.
+* **Page-table length register (PTLR)**: indicates the size of the page table. 
+###9.3.4 Shared Pages
+* **An advantage of paging is the possibility of _sharing_ common code**.
+* Organizing memory according to pages provides numerous benefits in addition to allowing several processes to share the same physical pages.
+
+## 9.4 Structure of the Page Table
+### 9.4.1 Hierarchical Paging
+* Most modern computer systems support a large logical address space, and the page table becomes too large.
+* **Forwared-mapped page table:** the page table itself is paged.
+### 9.4.2 Hashed Page Tables
+* One approach for handling address spaces larger than 32 bits is to use a **hashed page table**, with the hash value being the virtual page number.
+* Each element consists of three fields:
+    * 1. the virtual page
+    * 2. the value of the mapped page frame
+    * 3. a pointer to the next element in the linked list.
+* Algorithm:
+    * 1. the virtual page number in the virtula address is hashed into the table.
+    * 2. the virtual page number is compared with field 1 in the first element in the linked list.
+    * 3. If there is a match, the corresponding page frame (field 2) is used to form de desired physical address.
+    * 4. Otherwise, subsequent entries in the linked list are searched for a matching virtual page number.
+ 
+![Hashed Page Table](img/cap09/04_hashed_page_table.png "Hashed Page Table")
+
+* **Clustered page tables**: 
+    * useful for 64-bit address spaces.
+    * similar to hashed page tables, but each entry in the hash table referes to several pages rather than one.
+    * a single page-table entry can store the mappings for multiple physical-page frames.
+    * particularly useful for **sparse address spaces**.
+###9.4.3 Inverted Page Tables
+* **Natural table representation:** Usually, each process has an associated page table.
+* **Inverted page table**:
+    * has one entry for each real page (or frame) of memory.
+    * each entry consists of the virtual address of the page stored in that real memory location, with information about the process that owns the page.
+    * thus, only one page table is in the system, and it has only one entry for each page of physical memory.
+* Inverted page tables often require that an address-space identifier be stored in each entry of the page table, since the table usually contains several different address spaces mapping physical memory.
+* Although this scheme decreases the amount of memory needed to store each page table, it increases the amount of time needed to search the table when a page reference occurs.
+* Since the inverted page table is sorted by physical address, the whole table might need to be serached before a match is found.
+    * Solution: hash table.
+* Problem with inverted page tables involves shared memory.
+    * with standard paging, each process has its own page table, which allows multiple virtual addresses to be mapped to the same physical address.
+    * because there is only one virtual page entry for every physical page, one physical page cannot have two or more shared virtual addresses.
+    * therefore, with inverted page tables, only one mapping of virtual addresses to the shared physical address may occur at any given time.
+ 
+##9.5 Swapping
+
+![Inverted Page Table](img/cap09/05_inverted_page_table.png "Inverted Page Table")
+
 * 
