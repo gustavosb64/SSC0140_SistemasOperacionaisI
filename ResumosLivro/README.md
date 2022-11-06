@@ -74,15 +74,32 @@
 - [ ] 10.3 Estrutura de Diretório e Disco
 - [ ] 10.6 Proteção
 
-### Capítulo 12: Estrutura de Armazenamento de Massa
-- [ ] 12.1 Visão Geral da Estrutura de Armazenamento de Massa
-- [ ] 12.4 Scheduling de Disco
-- [ ] 11.3 _NVM Scheduling_ [10<sup>th</sup> _edition_]
+### Chapter 11: Mass-Storage Structure
+- [X] 11.1 Overview of Mass-Storage
+- [X] 11.2 HDD Scheduling
+- [X] 11.3 NVM Scheduling
 
-### Capítulo 13: Sistemas de I/O
-- [ ] 13.1 Visão Geral 
-- [ ] 13.2 Hardware de I/O
-- [ ] 13.3 Interface de I/O da Aplicação
+### Chapter 12: I/O Systems
+- [ ] 13.1 Overview
+- [ ] 13.2 I/O Hardware 
+- [ ] 13.3 Application I/O Interface
 
 ----------------------------------------------------
-## Parte V: Proteção e Segurança
+## Parte VI: File System
+
+### Chapter 13: File-System Interface
+- [ ] 13.1 File Concept
+- [ ] 13.2 Access Methods
+- [ ] 13.3 Directory Structure 
+
+### Chapter 14: File-System Implementation
+- [ ] 14.1 File-System Structure
+- [ ] 14.2 File-System Operations
+- [ ] 14.3 Directory Implementation 
+- [ ] 14.4 Allocation Methods
+- [ ] 14.5 Free-Space Management
+
+### Chapter 15: File-System Internals
+- [ ] 15.1 File Systems 
+- [ ] 15.2 File-System Mounting
+- [ ] 15.3 Partitions and Mounting
